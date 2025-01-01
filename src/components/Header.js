@@ -10,6 +10,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { Box, HStack, Text } from "@chakra-ui/react";
 
+
 const socials = [
   {
     icon: faEnvelope,
@@ -72,15 +73,15 @@ const Header = () => {
 
             {socials.map((social, index)=> (
               <a key={index} href={social.url} target="_blank" rel="noopener noreferrer">
-              <FontAwesomeIcon icon={social.icon} size="lg" />  
+              <FontAwesomeIcon icon={social.icon} size="2x" />  
               </a>
             ))}
             </HStack>
           </nav>
           <nav>
             <HStack spacing={8}>
-              <a href="#projects-section" onClick={handleClick("projects")}>My Projects</a>
-              <a href="#contactme-section" onClick={handleClick("contactme")}>Contact Me</a>
+              <a href="#projects-section" onClick={handleClick("projects")}><Text fontSize="xl">Projects</Text> </a>
+              <a href="#contactme-section" onClick={handleClick("contactme")}><Text fontSize="xl">Contact Me</Text></a>
             </HStack>
           </nav>
         </HStack>
